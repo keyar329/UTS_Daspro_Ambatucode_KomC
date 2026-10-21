@@ -72,6 +72,7 @@ begin
           maxHP := 400;
           playerDmg := 20;
         end;
+        
       end;
 
       playerHP := maxHP;
@@ -116,7 +117,7 @@ begin
             writeln(' MUSUH   : ', namaMusuh, ' | HP: ', musuhHP);
             writeln('==================================================');
             writeln('1. Attack (Serang)');
-            writeln('2. Item   (Gunakan Potion +150 HP)');
+            writeln('2. Item   (Gunakan Potion 200 HP)');
             writeln('3. Run    (Melarikan Diri & Ulang Gelombang)');
             write('Pilih Aksi (1-3): ');
             readln(pilihanAksi);
@@ -150,7 +151,7 @@ begin
                    else
                    begin
                      dec(potion);
-                     playerHP := playerHP + 150;
+                     playerHP := playerHP + 200;
                      if playerHP > maxHP then playerHP := maxHP;
                      writeln('>> Anda meminum Potion. HP dipulihkan menjadi ', playerHP, '!');
                    end;
